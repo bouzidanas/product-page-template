@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .page__section > .section__content {
@@ -14,15 +15,11 @@
     max-width: var(--max-content-width);
 }
 
-.content__cont {
-    display: flex;
-    gap: inherit;
+.page__section[data-theme="light"] {
+    color: var(--primary-dark-color);
 }
 
-.content__cont.vert {
-    flex-direction: column;
+.page__section[data-theme="dark"] {
+    color: var(--primary-light-color);
 }
 
-.content__cont.hor {
-    flex-direction: row;
-}
