@@ -1,0 +1,15 @@
+.section {
+    --max-content-width: 1200px;
+
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-content-width);
+}
