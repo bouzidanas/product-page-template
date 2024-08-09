@@ -2,13 +2,20 @@
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 .btn-primary {
-  border-radius: 1em;
-  padding: 0.5em 1em;
+  border-radius: 1.7em;
+  padding: 1em 1.5em;
+  border: none;
 }
 
 .btn-secondary {
   padding: 0.5em 1em;
+  background: none;
+  border: none;
 }
 
 .App__top.btn-primary {
@@ -16,9 +23,9 @@
   color: var(--primary-light-color);
 }
 
-.App__top.btn-secondary {
+.App__top.btn-secondary:hover {
   text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.4em;
 }
 
 .App__top.btn-primary:hover {

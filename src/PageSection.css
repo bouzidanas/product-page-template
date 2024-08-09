@@ -1,15 +1,28 @@
-.section {
+.page__section {
     --max-content-width: 1200px;
 
-    position: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.section > div {
+.page__section > .section__content {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: var(--max-content-width);
+}
+
+.content__cont {
+    display: flex;
+    gap: inherit;
+}
+
+.content__cont.vert {
+    flex-direction: column;
+}
+
+.content__cont.hor {
+    flex-direction: row;
 }

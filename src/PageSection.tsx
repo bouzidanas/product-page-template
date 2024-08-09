@@ -13,7 +13,7 @@ interface PageSectionProps {
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const PageSection = ({ height = "fit", maxWidth = 1000, gap = "2rem", padding = "3rem", backgroundColor = "transparent", stack="vertical", maxHeight, fontScale, style, children } : PageSectionProps) => {
+const PageSection = ({ height = "fit", maxWidth = 1000, gap = "1.3rem", padding = "3rem", backgroundColor = "transparent", stack="vertical", maxHeight, fontScale, style, children } : PageSectionProps) => {
 
     const outerStyle : React.CSSProperties = {
         minHeight: height === "full" ? "100dvh" : height === "fit" ? "fit-content" : "unset",
@@ -40,12 +40,12 @@ const PageSection = ({ height = "fit", maxWidth = 1000, gap = "2rem", padding = 
     }
 
     return (
-        <section className="PageSection" style={outerStyle}>
+        <section className="page__section" style={outerStyle}>
             {Array.isArray(backgroundColor)
-                ? <div className="PageSection__background" style={backgroundStyle}></div>
+                ? <div className="section__background" style={backgroundStyle}></div>
                 : null
             }
-            <div className="PageSection__content" style={innerStyle}>
+            <div className="section__content" style={innerStyle}>
                 {children}
             </div>
         </section>
