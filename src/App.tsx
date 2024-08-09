@@ -62,11 +62,14 @@ function App() {
       <PageSection vertical maxWidth="1120px" backgroundColor="#04182B" height="fit" padding="5rem 0" >
         <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
           <SubSection vertical style={{flex: "2 0 440px", minWidth: "400px", maxWidth: "calc(670px - 2rem)", textAlign: "left", gap: "0.3rem"}}>
-            <h4 style={{marginBottom: "1rem"}}>DataEdge</h4>
-            <h3>Make better decisions faster</h3>
-            <p>Analyze all your data in one place for supreme efficiency.</p>
+            <SubSection horizontal style={{gap: "0.6rem", alignItems: "center", marginBottom: "1rem", justifyContent: "left"}}>
+              <img src="./streamlit-logo.svg" alt="Streamlit" style={{width: "38px", height: "auto"}}/>
+              <h4>Streamlit</h4>
+            </SubSection>
+            <h3>Build powerful apps</h3>
+            <p>A faster way to build and share data apps.</p>
             <div style={{display: "flex", flexWrap: "wrap", justifyContent: "left", alignItems: "center", padding: "2rem 0 0.75rem 0"}}>
-              <button className="App__top btn-primary">Explore DataEdge</button>
+              <button className="App__top btn-primary">Explore Streamlit</button>
             </div>
           </SubSection>
           <SubSection horizontal style={{width: "calc(670px - 2rem)"}}>
