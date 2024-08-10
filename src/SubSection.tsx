@@ -13,7 +13,7 @@ const SubSection = ({ horizontal, vertical, style, className, children } : SubSe
     const classString = "content__cont " + (horizontal ? "hor " : vertical ? "vert " : "");
 
     return (
-        <section className={classString + className} style={style}>
+        <section className={classString + (className??"")} style={style}>
             {children}
         </section>
     )

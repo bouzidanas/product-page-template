@@ -12,11 +12,13 @@ interface PageSectionProps {
     padding?: "none" | "small" | "medium" | "large" | string | number;
     fontScale?: number;
     bgColor?: string | [string, string] | [string, string, string];
+    className?: string;
     style?: React.CSSProperties;
+    id?: string;
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = "transparent", vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, style, children } : PageSectionProps) => {
+const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = "transparent", vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps) => {
 
     const outerStyle : React.CSSProperties = {
         minHeight: height === "full" ? "100dvh" : height === "fit" ? "fit-content" : "unset",
@@ -35,7 +37,7 @@ const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = 
     }
 
     return (
-        <section className="page__section" style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
+        <section id={id} className={"page__section " + (className??"")} style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
             <div className="section__content" style={innerStyle}>
                 {children}
             </div>
