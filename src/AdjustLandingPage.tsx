@@ -5,9 +5,10 @@ import { PageSection, SubSection } from './components';
 import { useIsMobileWidth, useScrolledPast } from './hooks';
 import './AdjustLandingPage.css';
 
-const ScrollTo = ({dest, onClick=()=>{}, children}: {dest: string, onClick?: ()=>void, children: React.ReactNode}) => {
+// Desc: Custom anchor component that scrolls to a certain element on the page when clicked
+const ScrollTo = ({dest, onClick=()=>{}, children, ...props}: {dest: string, onClick?: ()=>void, children: React.ReactNode} & React.HTMLProps<HTMLAnchorElement>) => {
   return (
-    <a onClick={()=>{document.getElementById(dest)?.scrollIntoView({behavior: 'smooth'}); onClick()}}>{children}</a>
+    <a onClick={()=>{document.getElementById(dest)?.scrollIntoView({behavior: 'smooth'}); onClick()}} {...props}>{children}</a>
   )
 }
 
