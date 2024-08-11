@@ -24,7 +24,8 @@ html {
   --secondary-dark-color: #6177a4;
 
   --highlight-color: #005FF7;
-  
+
+  color: var(--primary-light-color);
   width: 100%;
   background: linear-gradient( to bottom, #04182B, #04182B 11%, white 11%, white);
 }
