@@ -66,7 +66,7 @@ const Header = () => {
 const Footer = () => {
   return ( 
     <div className="footer">
-      <span>Product Landing Page Template (2024, Anas Bouzid)</span>
+      <span>(2024, Anas Bouzid) Illustrations by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a></span>
       <a href="#">SECURITY ADVISORIES</a>
       <a href="#">PRIVACY NOTICE</a>
       <a href="#">TERMS OF USE</a>
