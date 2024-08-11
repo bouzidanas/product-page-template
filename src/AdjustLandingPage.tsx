@@ -82,7 +82,7 @@ const Header = () => {
 const Footer = () => {
   return ( 
     <div className="footer">
-      <span>(2024) Product Landing Page Template by Anas Bouzid</span>
+      <span>Product Landing Page Template (2024, Anas Bouzid)</span>
       <a href="#">SECURITY ADVISORIES</a>
       <a href="#">PRIVACY NOTICE</a>
       <a href="#">TERMS OF USE</a>
