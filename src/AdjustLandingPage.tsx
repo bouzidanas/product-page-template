@@ -13,7 +13,7 @@ const ScrollTo = ({dest, onClick=()=>{}, children}: {dest: string, onClick?: ()=
 
 const Header = () => {
   const [positionToTop, setPositionToTop] = useState(false);
-  const [mobileMode, setMobileMode] = useState(false);
+  const [mobileMode, setMobileMode] = useState(window.innerWidth <= 752);
   const [showMenu, setShowMenu] = useState(false);
 
   const HPageOptions = () =>
