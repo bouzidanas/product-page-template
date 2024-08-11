@@ -1,7 +1,7 @@
 >[!WARNING]
 > This project is still in early development and is not yet ready for production use. Feel free to contribute to the project by submitting a pull request or opening an issue.
 
-![product landing page screenshot]()
+![product landing page screenshot](public/imgs/product-landing-page-screenshot.png)
 
 # Product Landing Page Template (React)
 
