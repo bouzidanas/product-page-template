@@ -238,7 +238,7 @@ const ResourcesSection = () => {
           <div style={{display: "flex", flexDirection: "column", height: "250px", justifyContent: "start"}}>
             <p style={{fontWeight: 300, fontSize: "85%", marginBottom: "8px"}}>EBOOK</p>
             <h4 style={{fontWeight: "500"}}>Mobile app trends: 2024 edition</h4>
-            <p>Get first dibs on exclusive, actionable data, expert insights on AI and personalization, and the keys to supercharged app growth.</p>
+            <p>Get early access to exclusive, actionable data, expert insights on AI and personalization, and the keys to supercharged your app's growth.</p>
           </div>
         </SubSection>
       </SubSection>
@@ -250,7 +250,7 @@ const FooterSection = () => {
 
   //Footer section with 4 rows of links in a PageSection
   return (
-    <PageSection vertical centerText className="section__footer" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0 0 0"}}>
+    <PageSection vertical centerText className="section__footer" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="2rem 0" gap="3rem" style={{padding: "45px 0 0 0"}}>
       <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center"}}>
         <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>SITE</h6>
