@@ -93,7 +93,7 @@ const Footer = () => {
 
 const IntroSection = () => {
   return (
-    <PageSection vertical centerText maxWidth="1120px" bgColor="#04182B" padding="6.25rem 0 2rem 0" style={{padding: "40px 0", maxWidth: 700, margin: "0 2rem"}}>
+    <PageSection vertical centerText maxWidth="700px" bgColor="#04182B" padding="6.25rem 0 2rem 0" style={{padding: "40px 0", margin: "0 2rem"}}>
       <h1>Accelerate your app's growth</h1>
       <p>Your end-to-end solution for every stage of the app marketing journey. Measure, optimize, and scale app growth across platforms.</p>
       <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "0.5rem", padding: "1rem 0"}}>
@@ -114,12 +114,12 @@ const ImageTransitionSection = () => {
 
 const IncentivesSection = () => {
   return (
-    <PageSection vertical light centerText id="incentives" maxWidth="1120px" bgColor="#ffffff" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0"}}>
+    <PageSection vertical light centerText id="incentives" maxWidth="min(1120px, 90vw)" bgColor="#ffffff" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0"}}>
       <SubSection vertical style={{maxWidth: 800, margin: "0 2rem"}}>
           <h2>Everything you need in one measurement and analytics suite</h2>
           <p style={{fontSize: "21px"}}>Unlock attribution data, optimize ad performance, and leverage the reporting and insights you need to meet business goals and scale efficiently.</p>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
+      <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap-reverse"}}>
         <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: "left"}}>
           <h3>Maximize impact</h3>
           <p>Don’t just measure data, measure impact. Drive fast results with accurate, real-time measurement data to meet and exceed your KPIs across channels.</p>
@@ -131,7 +131,7 @@ const IncentivesSection = () => {
           <img src="./imgs/idea-bulb.png" alt="placeholder" style={{width: "340px", height: "auto", marginLeft: "1rem"}} />
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap"}}>
+      <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap"}}>
         <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
           <img src="./imgs/gain-insights.png" alt="placeholder" style={{width: "340px", height: "auto", marginRight: "1rem"}} />
         </SubSection>
@@ -143,7 +143,7 @@ const IncentivesSection = () => {
           </div>
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
+      <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap-reverse"}}>
         <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: "left"}}>
           <h3>Grow strategically</h3>
           <p>Experience tangible growth. Scale your business and your profits with ad performance automation, budget optimization, and more.</p>
@@ -161,8 +161,8 @@ const IncentivesSection = () => {
 
 const ProductSection = () => {
   return (
-    <PageSection vertical id="products" maxWidth="1120px" bgColor="#04182B" padding="5rem 0" >
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
+    <PageSection vertical id="products" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="5rem 0" >
+      <SubSection horizontal style={{width: "100%", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
         <SubSection vertical style={{flex: "2 0 350px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", textAlign: "left", gap: "0.3rem"}}>
           <SubSection horizontal style={{gap: "0.6rem", alignItems: "center", marginBottom: "1rem", justifyContent: "left"}}>
             <img src="./streamlit-logo.svg" alt="Streamlit" style={{width: "38px", height: "auto"}}/>
@@ -178,7 +178,7 @@ const ProductSection = () => {
           <video src="./videos/streamlit.mp4" controls style={{width: "100%", height: "auto", borderRadius: "1rem"}} />
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
+      <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
         <SubSection horizontal style={{flex: "1 0 346px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "1rem", alignItems: "start", justifyContent: "left"}}>
           <HiOutlineCheckCircle color='#ff5454' size={80} style={{marginLeft: "-0.2em", marginTop: "-1.3rem"}}/>
           <SubSection vertical style={{textAlign: "left", gap: "0.6rem"}}>
@@ -244,8 +244,8 @@ const FooterSection = () => {
 
   //Footer section with 4 rows of links in a PageSection
   return (
-    <PageSection vertical centerText className="section__footer" maxWidth="1120px" bgColor="#04182B" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0 0 0"}}>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center"}}>
+    <PageSection vertical centerText className="section__footer" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0 0 0"}}>
+      <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center"}}>
         <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>SITE</h6>
           <a href="#">Home</a>
