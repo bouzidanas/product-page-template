@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { HiOutlineCheckCircle, HiXMark } from "react-icons/hi2";
+import { HiOutlineCheckCircle } from "react-icons/hi2";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import PageSection from './PageSection';
 import SubSection from './SubSection';
@@ -13,8 +13,8 @@ const ScrollTo = ({dest, onClick=()=>{}, children}: {dest: string, onClick?: ()=
 
 const Header = () => {
   const [positionToTop, setPositionToTop] = useState(false);
-  const [mobileMode, setMobileMode] = useState(true);
-  const [showMenu, setShowMenu] = useState(true);
+  const [mobileMode, setMobileMode] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const HPageOptions = () =>
   <>
@@ -28,17 +28,23 @@ const Header = () => {
     const handleScroll = () => {
       setPositionToTop(window.scrollY > 75);
     };
+    const onResize = () => {
+      setMobileMode(window.innerWidth <= 752);
+    }
+    
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", onResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return ( 
     <>
       <PageSection vertical centerText light={positionToTop} className={"page__nav " + (positionToTop ? "latch-top" : "")} height="100px" maxWidth="1120px" bgColor={positionToTop ? "#fff" : "#04182B"} style={{padding: "22px 0"}}>
-        <SubSection horizontal className='header' style={{width: "min(1400px, 91vw)", gap: "2rem", alignItems: "center", justifyContent: "space-between", fontWeight: "500"}}>
+        <SubSection horizontal className='header' style={{width: "min(1400px, 90vw)", gap: "2rem", alignItems: "center", justifyContent: "space-between", fontWeight: "500"}}>
           <SubSection horizontal className="left">
             <a href="#"><span style={{fontSize: "240%"}}>PLPT</span></a>
             {mobileMode || <HPageOptions />}
@@ -56,7 +62,7 @@ const Header = () => {
       </PageSection>
       {mobileMode && showMenu && 
         <PageSection vertical centerText light className="page__nav mobile latch-top"  height="100dvh" maxWidth="1120px" bgColor= "#fff" style={{padding: "22px 0", justifyContent: "start", height: "100%"}}>
-          <SubSection vertical className='header' style={{width: "min(1400px, 91vw)", gap: "0rem", alignItems: "start"}}>
+          <SubSection vertical className='header' style={{width: "min(1400px, 90vw)", gap: "0rem", alignItems: "start"}}>
             <SubSection horizontal style={{width: "100%",justifyContent: "space-between"}}>
               <a href="#"><span style={{fontSize: "240%"}}>PLPT</span></a>
               <FaXmark size={32} onClick={()=>setShowMenu(false)}/>
@@ -113,7 +119,7 @@ const IncentivesSection = () => {
           <h2>Everything you need in one measurement and analytics suite</h2>
           <p style={{fontSize: "21px"}}>Unlock attribution data, optimize ad performance, and leverage the reporting and insights you need to meet business goals and scale efficiently.</p>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
         <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: "left"}}>
           <h3>Maximize impact</h3>
           <p>Don’t just measure data, measure impact. Drive fast results with accurate, real-time measurement data to meet and exceed your KPIs across channels.</p>
@@ -125,7 +131,7 @@ const IncentivesSection = () => {
           <img src="./imgs/idea-bulb.png" alt="placeholder" style={{width: "340px", height: "auto", marginLeft: "1rem"}} />
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap"}}>
         <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
           <img src="./imgs/gain-insights.png" alt="placeholder" style={{width: "340px", height: "auto", marginRight: "1rem"}} />
         </SubSection>
@@ -137,7 +143,7 @@ const IncentivesSection = () => {
           </div>
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse"}}>
         <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: "left"}}>
           <h3>Grow strategically</h3>
           <p>Experience tangible growth. Scale your business and your profits with ad performance automation, budget optimization, and more.</p>
@@ -156,7 +162,7 @@ const IncentivesSection = () => {
 const ProductSection = () => {
   return (
     <PageSection vertical id="products" maxWidth="1120px" bgColor="#04182B" padding="5rem 0" >
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
         <SubSection vertical style={{flex: "2 0 350px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", textAlign: "left", gap: "0.3rem"}}>
           <SubSection horizontal style={{gap: "0.6rem", alignItems: "center", marginBottom: "1rem", justifyContent: "left"}}>
             <img src="./streamlit-logo.svg" alt="Streamlit" style={{width: "38px", height: "auto"}}/>
@@ -172,7 +178,7 @@ const ProductSection = () => {
           <video src="./videos/streamlit.mp4" controls style={{width: "100%", height: "auto", borderRadius: "1rem"}} />
         </SubSection>
       </SubSection>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
         <SubSection horizontal style={{flex: "1 0 346px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "1rem", alignItems: "start", justifyContent: "left"}}>
           <HiOutlineCheckCircle color='#ff5454' size={80} style={{marginLeft: "-0.2em", marginTop: "-1.3rem"}}/>
           <SubSection vertical style={{textAlign: "left", gap: "0.6rem"}}>
@@ -204,7 +210,7 @@ const ResourcesSection = () => {
     <PageSection vertical light centerText id='resources' maxWidth="1120px" bgColor="#e6eef2" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0"}}>
       <h5 style={{color: "var(--secondary-dark-color)"}}>LEARN FROM OUT EXPERTS</h5>
       <h2>Whats new at Streamlit?</h2>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "start"}}>
         <SubSection vertical style={{flex: "1 0 346px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <div style={{display: "flex", height: "340px", width: "100%", alignItems: "end", justifyContent: "center"}}>
             <img src="./imgs/mobile.png" alt="placeholder" style={{width: "auto", height: "100%"}} />
@@ -239,7 +245,7 @@ const FooterSection = () => {
   //Footer section with 4 rows of links in a PageSection
   return (
     <PageSection vertical centerText className="section__footer" maxWidth="1120px" bgColor="#04182B" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0 0 0"}}>
-      <SubSection horizontal style={{width: "min(1400px, 91vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "center"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "center"}}>
         <SubSection vertical style={{flex: "1 0 160px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>SITE</h6>
           <a href="#">Home</a>
