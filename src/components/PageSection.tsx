@@ -1,3 +1,42 @@
+// Desc: This component is used to create a (vertically stacked) section of the product landing page with a background color, padding, and gap between children.
+// Params:
+//      vertical - boolean value that determines if the children of the section should be vertically stacked
+//      light - boolean value that determines if the section should have a light theme
+//      dark - boolean value that determines if the section should have a dark theme
+//      centerText - boolean value that horizontally centers the text of the section
+//      height - string or number that determines the height of the section. Combines minHeight and height CSS properties.
+//      maxHeight - string or number that determines the max height of the section contents (not the section itself)
+//      maxWidth - string or number that determines the max width of the section contents (not the section itself).
+//                 Note that the section width is always 100% (i.e. the width of the parent container)
+//      gap - string or number that determines the gap between children
+//      padding - string or number that determines the padding of the section
+//      fontScale - number that determines the font scale of the section
+//      bgColor - string, [string, string], or [string, string, string] that determines the background color of the section.
+//                An array of two strings creates a background of two colors with the top half is the color of the first string and the bottom half is the color of the second string.
+//                An array of three strings creates a background of two colors where the first string determines the percentage of the background that is the color of the second string and the third string determines the color of the remaining portion of the background.
+//      className - string that determines the class name of the section
+//      style - CSSProperties object that determines the style of the section contents (not the section itself)
+//      id - string that determines the id of the section
+//      children - ReactNode or ReactNode[] that determines the children of the section
+// Return:
+//      <section> JSX.Element
+// ................................................................................................................
+//
+// Intention: The idea here is to create a component that has common landing page section structure built in with the most common configuration options available as props.
+//            The props mostly configure the outter structure of the section and some inner section structure. The `style` prop allows for styling the container nearest to the contents (i.e. children).
+// Notes: 
+// - Only one of `light` or `dark` can be true at a time. If both are true, `light` will take precedence.
+// - The `fontScale` prop is used to scale the font size of the section. It is a multiplier that scales the font size of the section.
+// - The `padding` prop is used to set the padding of the section not the padding of the section contents. The padding of the section contents can be set via the `style` prop.
+// 
+// Tips:
+// - A common desirable behavior is to have a section not exceed a maximum width except when the window becomes smaller than this width.
+//   In this case, the section should shrink to fit a portion of the window.
+//   There are three ways to achieve this:
+//     1. Set `maxWidth` prop to min([MAX], [PORTION]) where [MAX] is the maximum width and [PORTION] is the portion of the window width that the section should not exceed.
+//     2. Set `maxWidth` prop to [MAX] and set horizontal padding of the section (via `padding` prop) or section contents (via `padding` in `style` prop) to a none-zero value.
+//     3. Do 1 or 2 but set the `maxWidth` of the section contents (via `maxWidth` in `style` prop) instead.
+
 import './PageSection.css';
 
 interface PageSectionProps {
