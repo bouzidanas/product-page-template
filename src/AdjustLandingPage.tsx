@@ -61,7 +61,7 @@ const Header = () => {
         </SubSection>
       </PageSection>
       {mobileMode && showMenu && 
-        <PageSection vertical centerText light className="page__nav mobile latch-top"  height="100lvh" maxWidth="1120px" bgColor= "#fff" style={{padding: "22px 0", justifyContent: "start", height: "100%"}}>
+        <PageSection vertical centerText light className="page__nav mobile latch-top"  height="100lvh" maxWidth="1120px" bgColor= "#fff" style={{justifyContent: "start", height: "100%"}}>
           <SubSection vertical className='header' style={{width: "min(1400px, 90vw)", gap: "0rem", alignItems: "start"}}>
             <SubSection horizontal style={{width: "100%",justifyContent: "space-between"}}>
               <a href="#"><span style={{fontSize: "240%"}}>PLPT</span></a>

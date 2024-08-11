@@ -140,8 +140,8 @@ a:hover {
 
 .footer > a {
   color: var(--primary-light-color);
-  flex-grow: 0;
   font-size: 84%;
+  flex-grow: 0;
   flex-wrap: nowrap;
 }
 
