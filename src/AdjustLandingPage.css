@@ -128,9 +128,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40px;
   opacity: 0.5;
   gap: 1.5em;
+  flex-wrap: wrap;
 }
 
 .footer > span {
@@ -142,6 +142,7 @@ a:hover {
   color: var(--primary-light-color);
   flex-grow: 0;
   font-size: 84%;
+  flex-wrap: nowrap;
 }
 
 .page__nav {
@@ -169,6 +170,34 @@ a:hover {
 }
 
 .left a:first-child:hover {
+  text-decoration: none;
+}
+
+.mobile .header > * {
+  height: 100px;
+  width: 100%;
+}
+
+.mobile .header > *:not(:last-child){
+  border-bottom: 1px solid #04182B;
+}
+
+.mobile .header > section:first-child {
+  height: 100px;
+}
+
+.mobile .header > *:not(:first-child) {
+  font-size: 130%;
+  font-weight: 700;
+}
+
+.mobile .header a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.mobile .header a:hover {
   text-decoration: none;
 }
 
