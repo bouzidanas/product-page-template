@@ -1,19 +1,11 @@
 :root {
-  --primary-light-color: #ffffff;
-  --primary-dark-color: #04182B;
-
-  --secondary-light-color: #F2FAFF;
-  --secondary-dark-color: #6177a4;
-
-  --highlight-color: #005FF7;
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark light;
-  color: var(--primary-light-color);
-  background-color: #ffffff;
+  color: #222;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
