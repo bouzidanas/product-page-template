@@ -63,18 +63,19 @@ a {
   color: var(--highlight-color);
 }
 
-
 .btn-primary {
   border-radius: 1.7em;
   padding: 0.9em 1.5em;
   border: none;
   transition: all 0.5s ease-in-out;
+  user-select: none;
 }
 
 .btn-secondary {
   padding: 0.5em 1em;
   background: none;
   border: none;
+  user-select: none;
 }
 
 .App__top.btn-primary, *[data-theme="dark"] .App__top.btn-primary {
@@ -98,7 +99,6 @@ a {
 }
 
 
-
 *[data-theme="light"] {
   color: var(--primary-dark-color);
   background-color: var(--primary-light-color);
@@ -111,6 +111,7 @@ a {
 
 .section__footer a {
   color: var(--primary-light-color);
+  user-select: none;
 }
 
 .footer {
@@ -133,10 +134,12 @@ a {
   font-size: 84%;
   flex-grow: 0;
   flex-wrap: nowrap;
+  user-select: none;
 }
 
 .page__nav {
   position: absolute;
+  user-select: none;
 }
 
 .page__nav.latch-top {
