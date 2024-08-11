@@ -10,7 +10,7 @@ This is a product landing page template built with React. It is a simple, respon
 ## Features
 
 - **Responsive design.** The template is fully responsive and works on desktop, tablet, and mobile devices.
-- Does not rely on any 3rd party libraries or frameworks apart from `react` and `react-icons`. The latter can easily be removed if you don't want to use the icons.
+- **Pure React.** Does not rely on any 3rd party libraries or frameworks apart from `react` and `react-icons`. The latter can easily be removed if you don't want to use the icons.
 - **Conventional appearance.** Takes visual inspiration from the [Adjust](https://www.adjust.com/) and [Streamlit](https://www.streamlit.io/) landing pages.
 - **Reusable components.** The template is built with reusable components that you can easily customize and reuse. You can find these in the `src/components` directory.
 - **Custom hooks.** The template uses custom hooks to detect window widths and window scroll positions. You can find these in the `src/hooks` directory.
