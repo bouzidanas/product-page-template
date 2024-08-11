@@ -1,4 +1,5 @@
-
+>[!WARNING]
+> This project is still in early development and is not yet ready for production use. Feel free to contribute to the project by submitting a pull request or opening an issue.
 
 # (React) Product Landing Page Template
 
