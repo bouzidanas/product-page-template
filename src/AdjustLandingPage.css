@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #root {
   width: 100%;
   background: linear-gradient( to bottom, #04182B, #04182B 11%, white 11%, white);
@@ -54,10 +63,6 @@ a {
   color: var(--highlight-color);
 }
 
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.4em;
-}
 
 .btn-primary {
   border-radius: 1.7em;
@@ -92,22 +97,7 @@ a:hover {
   color: var(--primary-dark-color);
 }
 
-.App__top.btn-secondary:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.4em;
-}
 
-.App__top.btn-primary:hover, *[data-theme="dark"] .App__top.btn-primary:hover {
-  background-color: var(--primary-light-color);
-  color: var(--primary-dark-color);
-  border: 2px solid var(--primary-light-color);
-}
-
-*[data-theme="light"] .App__top.btn-primary:hover {
-  background-color: var(--highlight-color);
-  color: var(--primary-light-color);
-  border: 2px solid var(--highlight-color);
-}
 
 *[data-theme="light"] {
   color: var(--primary-dark-color);
@@ -179,10 +169,6 @@ a:hover {
   font-family: "Tiny5", sans-serif;
 }
 
-.left a:first-child:hover {
-  text-decoration: none;
-}
-
 .mobile .header > * {
   height: 100px;
   width: 100%;
@@ -207,15 +193,65 @@ a:hover {
   align-items: center;
 }
 
-.mobile .header a:hover {
+
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+  }
+
+  .App__top.btn-secondary:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+  }
+  
+  .App__top.btn-primary:hover, *[data-theme="dark"] .App__top.btn-primary:hover {
+    background-color: var(--primary-light-color);
+    color: var(--primary-dark-color);
+    border: 2px solid var(--primary-light-color);
+  }
+  
+  *[data-theme="light"] .App__top.btn-primary:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-light-color);
+    border: 2px solid var(--highlight-color);
+  }
+
+  .left a:first-child:hover {
+    text-decoration: none;
+  }
+  .mobile .header a:hover {
+    text-decoration: none;
+  }
+}
+
+a:active {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.App__top.btn-secondary:active {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.App__top.btn-primary:active, *[data-theme="dark"] .App__top.btn-primary:active {
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  border: 2px solid var(--primary-light-color);
+}
+
+*[data-theme="light"] .App__top.btn-primary:active {
+  background-color: var(--highlight-color);
+  color: var(--primary-light-color);
+  border: 2px solid var(--highlight-color);
+}
+
+.left a:first-child:active {
+  text-decoration: none;
+}
+.mobile .header a:active {
   text-decoration: none;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
