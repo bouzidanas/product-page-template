@@ -9,6 +9,10 @@
   }
 }
 
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 #root {
   width: 100%;
   background: linear-gradient( to bottom, #04182B, #04182B 11%, white 11%, white);
