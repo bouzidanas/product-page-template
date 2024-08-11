@@ -245,27 +245,27 @@ const FooterSection = () => {
   //Footer section with 4 rows of links in a PageSection
   return (
     <PageSection vertical centerText className="section__footer" maxWidth="1120px" bgColor="#04182B" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0 0 0"}}>
-      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "1.5rem", alignItems: "center"}}>
-        <SubSection vertical style={{flex: "1 0 160px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
+      <SubSection horizontal style={{width: "min(1400px, 90vw)", padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center"}}>
+        <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>SITE</h6>
           <a href="#">Home</a>
           <a href="#">Pricing</a>
           <a href="#">Solutions</a>
         </SubSection>
-        <SubSection vertical style={{flex: "1 0 160px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignItems: "start", justifyContent: "left", textAlign: "left", marginRight: "3rem"}}>
+        <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>RESOURCES</h6>
           <a href="#">Forum</a>
           <a href="#">Blog</a>
           <a href="#">Documentation</a>
           <a href="#">Support</a>
         </SubSection>
-        <SubSection vertical style={{flex: "1 0 160px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
+        <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>COMPANY</h6>
           <a href="#">About</a>
           <a href="#">Careers</a>
           <a href="#">Newsroom</a>
         </SubSection>
-        <SubSection vertical style={{flex: "1 0 160px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "end", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
+        <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "end", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
           <h6 style={{color: "var(--secondary-light-color)"}}>SOCIAL</h6>
           <a href="#">Twitter/X</a>
           <a href="#">LinkedIn</a>
