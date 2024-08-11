@@ -157,6 +157,16 @@ a:hover {
   z-index: 1000;
 }
 
+.page__nav.mobile {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.page__nav.mobile::-webkit-scrollbar {
+  display: none;
+}
+
 .page__nav ~ section {
   scroll-margin-top: 68px;
 }
