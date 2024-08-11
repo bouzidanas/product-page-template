@@ -166,6 +166,7 @@ a {
 
 .header a {
   color: inherit;
+  user-select: none;
 }
 
 .header  span {
