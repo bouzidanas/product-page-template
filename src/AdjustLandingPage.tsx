@@ -238,7 +238,7 @@ const ResourcesSection = () => {
           <div style={{display: "flex", flexDirection: "column", height: "250px", justifyContent: "start"}}>
             <p style={{fontWeight: 300, fontSize: "85%", marginBottom: "8px"}}>EBOOK</p>
             <h4 style={{fontWeight: "500"}}>Mobile app trends: 2024 edition</h4>
-            <p>Get early access to exclusive, actionable data, expert insights on personalization and AI, and the keys to supercharged your app's growth.</p>
+            <p>Get special access to exclusive, actionable data and expert insights on personalization and AI. Learn about exciting, emerging mobile technologies. Get the keys to supercharge your app's growth.</p>
           </div>
         </SubSection>
       </SubSection>
