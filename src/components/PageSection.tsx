@@ -36,6 +36,8 @@
 //     1. Set `maxWidth` prop to min([MAX], [PORTION]) where [MAX] is the maximum width and [PORTION] is the portion of the window width that the section should not exceed.
 //     2. Set `maxWidth` prop to [MAX] and set horizontal padding of the section (via `padding` prop) or section contents (via `padding` in `style` prop) to a none-zero value.
 //     3. Do 1 or 2 but set the `maxWidth` of the section contents (via `maxWidth` in `style` prop) instead.
+// - In addition, some cases call for a section content expanding to the width allowed even when the content is smaller than the maximum width.
+//   This can be achieved by setting the `width` prop in the `style` prop to "100%" and making sure to do the same for all inner containers that you want expanded as well.
 
 import './PageSection.css';
 
