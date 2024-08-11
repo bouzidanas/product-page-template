@@ -45,8 +45,9 @@ The quick and dirty:
 1. Copy `AdjustLandingPage.tsx` and `AdjustLandingPage.css` from the `src/` directory.
 2. Paste them into your project. 
 3. Rename the files to something that makes sense for your project.
-4. In the CSS file, you can change the css variables and properties to match your brand colors and styles.
-5. In the TSX file, you can:
+4. Update the imports inside `main.tsx` to point to the renamed files.
+5. In the CSS file, you can change the css variables and properties to match your brand colors and styles.
+6. In the TSX file, you can:
     - Change the content of the sections to match your product or service.
     - Change the icons to match your product or service.
     - Add or remove content as needed.
