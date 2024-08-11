@@ -22,7 +22,7 @@
 //      <section> JSX.Element
 // ................................................................................................................
 //
-// Intention: The idea here is to create a component that has common landing page section structure built in with the most common configuration options available as props.
+// Intention: The idea here is to create a component that has common landing page section structure built-in with the most common configuration options available as props.
 //            The props mostly configure the outter structure of the section and some inner section structure. The `style` prop allows for styling the container nearest to the contents (i.e. children).
 // Notes: 
 // - Only one of `light` or `dark` can be true at a time. If both are true, `light` will take precedence.
