@@ -22,7 +22,7 @@ const IncentivesSection = () => {
     const isNarrowView = useIsMobileWidth(1245);
   
     return (
-        <PageSection vertical light centerText id="incentives" maxWidth="min(1120px, 90vw)" bgColor="#ffffff" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0"}}>
+        <PageSection light id="incentives" bgColor="#ffffff" padding="2rem 0" gap="0.75rem" style={{padding: "45px 0"}}>
             <SubSection vertical style={{maxWidth: 800, margin: "0 2rem"}}>
                 <h2>Everything you need in one measurement and analytics suite</h2>
                 <p style={{fontSize: "21px"}}>Unlock attribution data, optimize ad performance, and leverage the reporting and insights you need to meet business goals and scale efficiently.</p>

@@ -11,7 +11,7 @@
 //Return:
 //      <section> JSX.Element
 
-import './SubSection.css';
+import './css/SubSection.css';
 
 interface SubSectionProps {
     horizontal?: boolean;

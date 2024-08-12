@@ -4,7 +4,7 @@ const LinkList = ({title, links}: {title: string, links: string[]}) => {
     return (
         <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
             <h6 style={{color: "var(--secondary-light-color)"}}>{title}</h6>
-            {links.map((link) => <a href="#">{link}</a>)}
+            {links.map((link) => <a key={link} href="#">{link}</a>)}
         </SubSection>
     )
 }
@@ -25,7 +25,7 @@ const FooterSection = () => {
 
     //Footer section with 4 rows of links in a PageSection
     return (
-        <PageSection vertical centerText className="section__footer" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="2rem 0" gap="4rem" style={{padding: "55px 0 0 0", width: "100%"}}>
+        <PageSection className="section__footer" bgColor="#04182B" padding="2rem 0" gap="4rem" style={{padding: "55px 0 0 0", width: "100%"}}>
             <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center", width: "100%"}}>
                 <LinkList title="SITE" links={["Home", "Pricing", "Solutions"]} />
                 <LinkList title="RESOURCES" links={["Forum", "Blog", "Documentation", "Support"]} />

@@ -39,7 +39,9 @@
 // - In addition, some cases call for a section content expanding to the width allowed even when the content is smaller than the maximum width.
 //   This can be achieved by setting the `width` prop in the `style` prop to "100%" and making sure to do the same for all inner containers that you want expanded as well.
 
-import './PageSection.css';
+import { useContext } from 'react';
+import { PageContext } from './Page';
+import './css/PageSection.css';
 
 interface PageSectionProps {
     vertical?: boolean;
@@ -51,6 +53,8 @@ interface PageSectionProps {
     maxWidth?: "full" | string | number;
     gap?: "none" | "small" | "medium" | "large" | string | number;
     padding?: "none" | "small" | "medium" | "large" | string | number;
+    scrollTop?: string | number;
+    scrollBottom?: string | number;
     fontScale?: number;
     bgColor?: string | [string, string] | [string, string, string];
     className?: string;
@@ -59,7 +63,36 @@ interface PageSectionProps {
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = "transparent", vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps) => {
+const PageSection = ({ height, gap, padding, bgColor, scrollBottom, scrollTop, vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps) => {
+
+    const pageContext = useContext(PageContext);
+
+    // Use prop values if they exist, otherwise use the values from the context
+    if (Object.keys(pageContext).length !== 0) {
+        height = height ?? pageContext.height;
+        gap = gap ?? pageContext.gap;
+        padding = padding ?? pageContext.padding;
+        bgColor = bgColor ?? pageContext.bgColor;
+        scrollBottom = scrollBottom ?? pageContext.scrollBottom;
+        scrollTop = scrollTop ?? pageContext.scrollTop;
+        vertical = vertical ?? pageContext.vertical;
+        light = light ?? pageContext.light;
+        dark = dark ?? pageContext.dark;
+        centerText = centerText ?? pageContext.centerText;
+        maxWidth = maxWidth ?? pageContext.maxWidth;
+        maxHeight = maxHeight ?? pageContext.maxHeight;
+        fontScale = fontScale ?? pageContext.fontScale;
+        className = className ?? pageContext.className;
+        style = style ?? pageContext.style;
+    }
+    const pageClassName = pageContext.className ?? "";
+    const pageStyle = pageContext.style ?? {};
+    
+    // Set default values if they are still undefined
+    height = height ?? "fit";
+    gap = gap ?? "1.3rem";
+    padding = padding ?? "0";
+    bgColor = bgColor ?? "transparent";
 
     const outerStyle : React.CSSProperties = {
         minHeight: height === "full" ? "100dvh" : height === "fit" ? "fit-content" : "unset",
@@ -67,6 +100,8 @@ const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = 
         fontSize: fontScale ? `calc(100% * ${fontScale})` : undefined,
         background: Array.isArray(bgColor) ? (bgColor.length === 2 ? 'linear-gradient( to bottom,' + bgColor[0] + ' 0%, '+ bgColor[0] + ' 50%, ' + bgColor[1] + ' 50%, ' + bgColor[1] + ' 100%)' : (bgColor.length === 3 ? 'linear-gradient( to bottom,' + bgColor[1] + ' 0%, '+ bgColor[1] + ' ' + bgColor[0] + ', ' + bgColor[2] + ' ' + bgColor[0] + ', ' + bgColor[2] + ' 100%)' : undefined)) : bgColor,
         padding: padding,
+        scrollMarginTop: scrollTop,
+        scrollMarginBottom: scrollBottom
     }
     const innerStyle : React.CSSProperties = {
         maxHeight: maxHeight === "full" ? "100%" : maxHeight,
@@ -74,11 +109,12 @@ const PageSection = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = 
         flexDirection: vertical ? "column" : undefined,
         gap: gap,
         textAlign: centerText ? "center" : undefined,
-        ...style
+        ...style,
+        ...pageStyle
     }
 
     return (
-        <section id={id} className={"page__section " + (className??"")} style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
+        <section id={id} className={"page__section " + pageClassName + " " + (className??"")} style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
             <div className="section__content" style={innerStyle}>
                 {children}
             </div>
