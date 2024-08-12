@@ -83,7 +83,8 @@ The `PageSection` component is a simple component that you can use to create sec
 #### Defaults
 
 
-The power of the `PageSection` component is what it configures for you given little input saving you time and effort. By default, this component will 
+The power of the `PageSection` component is what it configures for you given little input saving you time and effort. By default, this component will:
+
     1. center the section content (inside) both horizontally and vertically. 
     2. fit its width to its parent container.
     3. add a gap between the section content elements.
