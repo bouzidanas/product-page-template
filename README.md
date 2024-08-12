@@ -82,6 +82,7 @@ The `PageSection` component is a simple component that you can use to create sec
 
 #### Defaults
 
+![PageSection defaults](public/imgs/plpt-pagesection-wnotes.png)
 
 The power of the `PageSection` component is what it configures for you given little input saving you time and effort. By default, this component will:
 
@@ -91,7 +92,6 @@ The power of the `PageSection` component is what it configures for you given lit
 4. adjust its own height to fit its content.
 5. stack its content elements horizontally.
    
-![PageSection defaults](public/imgs/plpt-pagesection-wnotes.png)
 
 ## Contributing
 
