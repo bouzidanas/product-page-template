@@ -1,5 +1,5 @@
-import { PageSection, SubSection } from '../components';
-import { useIsMobileWidth } from '../hooks';
+import { PageSection, SubSection } from '../../components';
+import { useIsMobileWidth } from '../../hooks';
 
 const Incentive = ({title, description, img, alt, isNarrow, isRight = false}: {title: string, description: string, img: string, alt: string, isNarrow: boolean, isRight?: boolean}) => {
     return (

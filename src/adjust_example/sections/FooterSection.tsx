@@ -1,4 +1,4 @@
-import { PageSection, SubSection } from '../components';
+import { PageSection, SubSection } from '../../components';
 
 const LinkList = ({title, links}: {title: string, links: string[]}) => {
     return (

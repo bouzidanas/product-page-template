@@ -1,4 +1,4 @@
-import { Header } from './components';
+import { Header } from '../components';
 import { IntroSection, ImageTransitionSection, IncentivesSection, ProductSection, ResourcesSection, FooterSection } from './sections';
 import './AdjustLandingPage.css';
 

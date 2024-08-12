@@ -1,5 +1,5 @@
-import { PageSection, SubSection } from '../components';
-import { useIsMobileWidth } from '../hooks';
+import { PageSection, SubSection } from '../../components';
+import { useIsMobileWidth } from '../../hooks';
 
 const Resource = ({img, title, type, description, imgStyle}: {img: string, title: string, type: string, description: string, imgStyle?: React.CSSProperties}) => {
   return (

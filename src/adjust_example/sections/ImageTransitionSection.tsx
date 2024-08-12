@@ -1,4 +1,4 @@
-import { PageSection } from '../components';
+import { PageSection } from '../../components';
 
 const ImageTransitionSection = () => {
     return (

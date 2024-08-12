@@ -1,5 +1,5 @@
 import { HiOutlineCheckCircle } from "react-icons/hi2";
-import { PageSection, SubSection } from '../components';
+import { PageSection, SubSection } from '../../components';
 
 
 const CheckItem = ({title, description}: {title: string, description: string}) => {
