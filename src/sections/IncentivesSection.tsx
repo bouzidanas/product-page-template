@@ -1,6 +1,23 @@
 import { PageSection, SubSection } from '../components';
 import { useIsMobileWidth } from '../hooks';
 
+const Incentive = ({title, description, img, alt, isNarrow, isRight = false}: {title: string, description: string, img: string, alt: string, isNarrow: boolean, isRight?: boolean}) => {
+    return (
+        <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap-reverse", flexDirection: isRight ? "row-reverse" : "row"}}>
+            <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: isNarrow ? "center" : "left"}}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <div style={{display: "flex", flexWrap: "wrap", justifyContent: isNarrow ? "center" : "left", alignItems: "center", padding: isNarrow ? "1.3rem 0 0 0" : "1.3rem 0"}}>
+                    <button className="App__top btn-primary">Learn more</button>
+                </div>
+            </SubSection>
+            <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
+                <img src={img} alt={alt} style={{width: "340px", height: "auto", marginLeft: isRight ? "1rem" : undefined, marginRight: isRight ? undefined : "1rem"}} />
+            </SubSection>
+        </SubSection>
+    )
+}
+
 const IncentivesSection = () => {
     const isNarrowView = useIsMobileWidth(1245);
   
@@ -10,42 +27,9 @@ const IncentivesSection = () => {
                 <h2>Everything you need in one measurement and analytics suite</h2>
                 <p style={{fontSize: "21px"}}>Unlock attribution data, optimize ad performance, and leverage the reporting and insights you need to meet business goals and scale efficiently.</p>
             </SubSection>
-            <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap-reverse"}}>
-                <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: isNarrowView ? "center" : "left"}}>
-                    <h3>Maximize impact</h3>
-                    <p>Don’t just measure data, measure impact. Drive fast results with accurate, real-time measurement data to meet and exceed your KPIs across channels.</p>
-                    <div style={{display: "flex", flexWrap: "wrap", justifyContent: isNarrowView ? "center" : "left", alignItems: "center", padding: isNarrowView ? "1.3rem 0 0 0" : "1.3rem 0"}}>
-                        <button className="App__top btn-primary">Learn more</button>
-                    </div>
-                </SubSection>
-                <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
-                    <img src="./imgs/idea-bulb.png" alt="placeholder" style={{width: "340px", height: "auto", marginLeft: "1rem"}} />
-                </SubSection>
-            </SubSection>
-            <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap"}}>
-                <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
-                    <img src="./imgs/gain-insights.png" alt="placeholder" style={{width: "340px", height: "auto", marginRight: "1rem"}} />
-                </SubSection>
-                <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: isNarrowView ? "center" : "left"}}>
-                    <h3>Gain insights</h3>
-                    <p>Leverage our powerful reporting to easily share customized data visualizations and actionable insights to boost your ROI.</p>
-                    <div style={{display: "flex", flexWrap: "wrap", justifyContent: isNarrowView ? "center" : "left", alignItems: "center", padding: isNarrowView ? "1.3rem 0 0 0" : "1.3rem 0"}}>
-                        <button className="App__top btn-primary">Learn more</button>
-                    </div>
-                </SubSection>
-            </SubSection>
-            <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap-reverse"}}>
-                <SubSection vertical style={{width: "540px", minWidth: "300px", textAlign: isNarrowView ? "center" : "left"}}>
-                    <h3>Grow strategically</h3>
-                    <p>Experience tangible growth. Scale your business and your profits with ad performance automation, budget optimization, and more.</p>
-                    <div style={{display: "flex", flexWrap: "wrap", justifyContent: isNarrowView ? "center" : "left", alignItems: "center", padding: isNarrowView ? "1.3rem 0 0 0" : "1.3rem 0"}}>
-                        <button className="App__top btn-primary">Learn more</button>
-                    </div>
-                </SubSection>
-                <SubSection horizontal style={{width: "calc(600px - 2rem)"}}>
-                    <img src="./imgs/celebrate.png" alt="placeholder" style={{width: "340px", height: "auto", marginLeft: "1rem"}} />
-                </SubSection>
-            </SubSection>
+            <Incentive title="Maximize impact" description="Don’t just measure data, measure impact. Drive fast results with accurate, real-time measurement data to meet and exceed your KPIs across channels." img="./imgs/idea-bulb.png" alt="placeholder" isNarrow={isNarrowView} />
+            <Incentive title="Gain insights" description="Leverage our powerful reporting to easily share customized data visualizations and actionable insights to boost your ROI." img="./imgs/gain-insights.png" alt="placeholder" isNarrow={isNarrowView} isRight />
+            <Incentive title="Grow strategically" description="Experience tangible growth. Scale your business and your profits with ad performance automation, budget optimization, and more." img="./imgs/celebrate.png" alt="placeholder" isNarrow={isNarrowView} />
         </PageSection>
     )
 }

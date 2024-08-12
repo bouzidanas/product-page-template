@@ -1,5 +1,14 @@
 import { PageSection, SubSection } from '../components';
 
+const LinkList = ({title, links}: {title: string, links: string[]}) => {
+    return (
+      <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
+        <h6 style={{color: "var(--secondary-light-color)"}}>{title}</h6>
+        {links.map((link) => <a href="#">{link}</a>)}
+      </SubSection>
+    )
+  }
+
 export const Footer = () => {
     return ( 
       <div className="footer">
@@ -18,33 +27,10 @@ const FooterSection = () => {
     return (
       <PageSection vertical centerText className="section__footer" maxWidth="min(1120px, 90vw)" bgColor="#04182B" padding="2rem 0" gap="4rem" style={{padding: "55px 0 0 0", width: "100%"}}>
         <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center", width: "100%"}}>
-          <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
-            <h6 style={{color: "var(--secondary-light-color)"}}>SITE</h6>
-            <a href="#">Home</a>
-            <a href="#">Pricing</a>
-            <a href="#">Solutions</a>
-          </SubSection>
-          <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
-            <h6 style={{color: "var(--secondary-light-color)"}}>RESOURCES</h6>
-            <a href="#">Forum</a>
-            <a href="#">Blog</a>
-            <a href="#">Documentation</a>
-            <a href="#">Support</a>
-          </SubSection>
-          <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
-            <h6 style={{color: "var(--secondary-light-color)"}}>COMPANY</h6>
-            <a href="#">About</a>
-            <a href="#">Careers</a>
-            <a href="#">Newsroom</a>
-          </SubSection>
-          <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "end", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
-            <h6 style={{color: "var(--secondary-light-color)"}}>SOCIAL</h6>
-            <a href="#">Twitter/X</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-          </SubSection>
+            <LinkList title="SITE" links={["Home", "Pricing", "Solutions"]} />
+            <LinkList title="RESOURCES" links={["Forum", "Blog", "Documentation", "Support"]} />
+            <LinkList title="COMPANY" links={["About", "Careers", "Newsroom"]} />
+            <LinkList title="SOCIAL" links={["Twitter/X", "LinkedIn", "Facebook", "Instagram", "YouTube"]} />
         </SubSection>
         <Footer />
       </PageSection>
