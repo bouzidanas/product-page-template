@@ -44,12 +44,11 @@ npm run dev
 
 The quick and dirty:
 
-1. Copy the `adjust_example` directory in the `src/` directory.
-2. Paste it into your project to create a new directory for your product or service. 
-3. Rename the directory and the files inside it to match your product or service.
-4. Update the imports inside `main.tsx` to point to the renamed files.
-5. In the CSS file (in your newly added directory), you can change the css variables and properties to match your brand colors and styles.
-6. In the TSX files (in your newly added directory), you can:
+1. Duplicate the `adjust_example` directory in the `src/` directory.
+2. Rename the duplicate directory and the files inside it to match your product or service.
+3. Update the imports inside `main.tsx` to point to the renamed files.
+4. In the CSS file (in your newly added directory), you can change the css variables and properties to match your brand colors and styles.
+5. In the TSX files (in your newly added directory), you can:
     - Change the content of the sections to match your product or service.
     - Change the icons to match your product or service.
     - Add or remove content as needed.
