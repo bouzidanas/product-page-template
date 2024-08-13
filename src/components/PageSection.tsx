@@ -39,7 +39,7 @@
 // - In addition, some cases call for a section content expanding to the width allowed even when the content is smaller than the maximum width.
 //   This can be achieved by setting the `width` prop in the `style` prop to "100%" and making sure to do the same for all inner containers that you want expanded as well.
 
-import { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 import { PageContext } from './Page';
 import './css/PageSection.css';
 
@@ -56,14 +56,14 @@ interface PageSectionProps {
     scrollTop?: string | number;
     scrollBottom?: string | number;
     fontScale?: number;
-    bgColor?: string | [string, string] | [string, string, string];
+    bgColor?: number | string | [string | number, string | number] | [string, string | number, string | number];
     className?: string;
     style?: React.CSSProperties;
     id?: string;
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const PageSection = ({ height, gap, padding, bgColor, scrollBottom, scrollTop, vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps) => {
+const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(({ height, gap, padding, bgColor, scrollBottom, scrollTop, vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps, ref) => {
 
     const pageContext = useContext(PageContext);
 
@@ -87,6 +87,16 @@ const PageSection = ({ height, gap, padding, bgColor, scrollBottom, scrollTop, v
     }
     const pageClassName = pageContext.className ?? "";
     const pageStyle = pageContext.style ?? {};
+
+    if (typeof(bgColor) === "number") {
+        bgColor = pageContext.bgColorSet ? pageContext.bgColorSet[bgColor] : undefined;
+    }
+    else if (Array.isArray(bgColor)) {
+        bgColor = bgColor.map((color) => typeof(color) === "number" ? (pageContext.bgColorSet ? pageContext.bgColorSet[color] : "undefined") : color) as [string, string] | [string, string, string];
+        if (bgColor.includes("undefined")) {
+            bgColor = undefined;
+        }
+    }
     
     // Set default values if they are still undefined
     height = height ?? "fit";
@@ -114,12 +124,12 @@ const PageSection = ({ height, gap, padding, bgColor, scrollBottom, scrollTop, v
     }
 
     return (
-        <section id={id} className={"page__section " + pageClassName + " " + (className??"")} style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
+        <section id={id} ref={ref} className={"page__section " + pageClassName + " " + (className??"")} style={outerStyle} data-theme={light ? "light" : dark ? "dark" : undefined}>
             <div className="section__content" style={innerStyle}>
                 {children}
             </div>
         </section>
     )
-}
+})
 
 export default PageSection;

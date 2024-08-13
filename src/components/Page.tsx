@@ -15,15 +15,16 @@ interface PageProps {
     scrollTop?: string | number;
     scrollBottom?: string | number;
     fontScale?: number;
-    bgColor?: string | [string, string] | [string, string, string];
+    bgColor?: number | string | [string | number, string | number] | [string, string | number, string | number];
+    bgColorSet?: string[];
     className?: string;
     style?: React.CSSProperties;
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const Page = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = "transparent", vertical, light, dark, centerText, maxHeight, maxWidth, scrollTop, scrollBottom, fontScale, className, style, children } : PageProps) => {
+const Page = ({ height = "fit", gap = "1.3rem", padding = "0", bgColor = "transparent", vertical, light, dark, bgColorSet, centerText, maxHeight, maxWidth, scrollTop, scrollBottom, fontScale, className, style, children } : PageProps) => {
     return (
-        <PageContext.Provider value={{ height, vertical, light, dark, centerText, maxHeight, maxWidth, gap, padding, scrollTop, scrollBottom, fontScale, bgColor, className, style }}>
+        <PageContext.Provider value={{ height, vertical, light, dark, centerText, maxHeight, maxWidth, gap, padding, scrollTop, scrollBottom, fontScale, bgColor, bgColorSet, className, style }}>
             {children}
         </PageContext.Provider>
     )
