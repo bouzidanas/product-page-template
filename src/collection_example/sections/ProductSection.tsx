@@ -16,7 +16,7 @@ const CheckItem = ({title, description}: {title: string, description: string}) =
 
 const ProductSection = () => {
     return (
-        <PageSection id="products" bgColor="#04182B" padding="5rem 0" >
+        <PageSection id="products" bgColor={5} padding="5rem 0" >
             <SubSection horizontal style={{width: "100%", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
                 <SubSection vertical style={{flex: "2 0 350px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", textAlign: "left", gap: "0.3rem"}}>
                     <SubSection horizontal style={{gap: "0.6rem", alignItems: "center", marginBottom: "1rem", justifyContent: "left"}}>

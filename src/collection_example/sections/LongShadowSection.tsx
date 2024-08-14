@@ -56,7 +56,7 @@ const LongShadowSection = () => {
     }, [windowSize]);
 
     return (
-        <PageSection ref={pageSectionRef} className="long-shadow" bgColor={1} padding="14.5rem 0 14.5rem 0" style={{fontSize: "5vw"}}>
+        <PageSection ref={pageSectionRef} className="long-shadow" clip bgColor={1} padding="14.5rem 0 14.5rem 0" style={{fontSize: "max(4em, 5vw)"}}>
             F.ront E.nd Ex.periments
         </PageSection>
     )

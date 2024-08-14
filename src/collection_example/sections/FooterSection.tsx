@@ -2,7 +2,7 @@ import { PageSection, SubSection } from '../../components';
 
 const LinkList = ({title, links}: {title: string, links: string[]}) => {
     return (
-        <SubSection vertical style={{flex: "1 0 120px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
+        <SubSection vertical style={{flex: "0 0 70px", minWidth: "70px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "0.6rem", alignSelf: "start", alignItems: "start", justifyContent: "left", textAlign: "left"}}>
             <h6 style={{color: "var(--secondary-light-color)"}}>{title}</h6>
             {links.map((link) => <a key={link} href="#">{link}</a>)}
         </SubSection>
@@ -25,8 +25,8 @@ const FooterSection = () => {
 
     //Footer section with 4 rows of links in a PageSection
     return (
-        <PageSection className="section__footer" bgColor="#04182B" padding="2rem 0" gap="4rem" style={{padding: "55px 0 0 0", width: "100%"}}>
-            <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", gap: "2.4rem", alignItems: "center", width: "100%"}}>
+        <PageSection className="section__footer" bgColor={1} padding="2rem 0" gap="4rem" style={{padding: "55px 0 0 0", width: "100%"}}>
+            <SubSection horizontal style={{padding: "20px 0", flexWrap: "wrap", alignItems: "center", width: "100%", justifyContent: "space-between"}}>
                 <LinkList title="SITE" links={["Home", "Pricing", "Solutions"]} />
                 <LinkList title="RESOURCES" links={["Forum", "Blog", "Documentation", "Support"]} />
                 <LinkList title="COMPANY" links={["About", "Careers", "Newsroom"]} />

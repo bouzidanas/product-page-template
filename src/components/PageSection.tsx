@@ -48,6 +48,7 @@ interface PageSectionProps {
     light?: boolean;
     dark?: boolean;
     centerText?: boolean;
+    clip?: boolean;
     height?: "full" | "fit" | string | number;
     maxHeight?: "full" | string | number;
     maxWidth?: "full" | string | number;
@@ -63,7 +64,7 @@ interface PageSectionProps {
     children?: React.ReactNode | React.ReactNode[];
 }
 
-const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(({ height, gap, padding, bgColor, scrollBottom, scrollTop, vertical, light, dark, centerText, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps, ref) => {
+const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(({ height, gap, padding, bgColor, scrollBottom, scrollTop, vertical, light, dark, centerText, clip, maxWidth, maxHeight, fontScale, className, style, id, children } : PageSectionProps, ref) => {
 
     const pageContext = useContext(PageContext);
 
@@ -111,7 +112,8 @@ const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(({ height, gap,
         background: Array.isArray(bgColor) ? (bgColor.length === 2 ? 'linear-gradient( to bottom,' + bgColor[0] + ' 0%, '+ bgColor[0] + ' 50%, ' + bgColor[1] + ' 50%, ' + bgColor[1] + ' 100%)' : (bgColor.length === 3 ? 'linear-gradient( to bottom,' + bgColor[1] + ' 0%, '+ bgColor[1] + ' ' + bgColor[0] + ', ' + bgColor[2] + ' ' + bgColor[0] + ', ' + bgColor[2] + ' 100%)' : undefined)) : bgColor,
         padding: padding,
         scrollMarginTop: scrollTop,
-        scrollMarginBottom: scrollBottom
+        scrollMarginBottom: scrollBottom,
+        overflow: clip ? "hidden" : undefined
     }
     const innerStyle : React.CSSProperties = {
         maxHeight: maxHeight === "full" ? "100%" : maxHeight,
