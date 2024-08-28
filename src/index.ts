@@ -108,7 +108,7 @@ async function main() {
   s.stop('✅ Finished.');
 
   clack.log.success('🎉 Project created successfully!')
-  clack.note(`  Install packages:\n\n    1. cd ${selectProjectType} \n    2. npm install \n\n  Preview product landing page:\n\n    3. npm run dev`, 'Next Steps:');
+  clack.note(`  Install packages:\n\n    1. cd ${projectName} \n    2. npm install \n\n  Preview product landing page:\n\n    3. npm run dev`, 'Next Steps:');
 
   // Outro should contain instruction for the user to initalize the react project
   clack.outro(`🚀 Happy coding!`);
