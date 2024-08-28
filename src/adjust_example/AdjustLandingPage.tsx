@@ -1,7 +1,7 @@
 import { Header } from './components';
 import { IntroSection, ImageTransitionSection, IncentivesSection, ProductSection, ResourcesSection, FooterSection } from './sections';
 import './AdjustLandingPage.css';
-import Page from '../components/Page';
+import { Page }  from '../components';
 
 function AdjustLandingPage() {
 

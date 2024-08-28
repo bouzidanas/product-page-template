@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaBars, FaXmark } from "react-icons/fa6";
+import Bars from '../../assets/menu.svg?react';
+import XMark from '../../assets/x.svg?react';
 import { PageSection, SubSection } from '../../components';
 import { useIsMobileWidth, useScrolledPast } from '../../hooks';
 
@@ -33,7 +34,7 @@ const Header = () => {
           </SubSection>
           {mobileMode 
             ? <SubSection horizontal className="right">
-                <FaBars size={32} onClick={()=>setShowMenu(true)}/>
+                <Bars fontSize={32} onClick={()=>setShowMenu(true)}/>
               </SubSection>
             : <SubSection horizontal className="right">
                 <a href="/">Login</a>
@@ -47,7 +48,7 @@ const Header = () => {
           <SubSection vertical className='header' style={{width: "min(1400px, 90vw)", gap: "0rem", alignItems: "start"}}>
             <SubSection horizontal style={{width: "100%",justifyContent: "space-between"}}>
               <a href="/"><span style={{fontSize: "240%"}}>PLPT</span></a>
-              <FaXmark size={32} onClick={()=>setShowMenu(false)}/>
+              <XMark fontSize={32} onClick={()=>setShowMenu(false)}/>
             </SubSection>
             <HPageOptions />
             <SubSection horizontal style={{alignSelf: "center", gap: "2rem"}}>

@@ -1,4 +1,4 @@
-import Page from '../components/Page';
+import { Page } from '../components';
 import { Header } from './components';
 import { LongShadowSection, IncentivesSection, ProductSection, ResourcesSection, FooterSection } from './sections';
 import './FEExLandingPage.css';

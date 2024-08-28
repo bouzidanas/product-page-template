@@ -1,11 +1,11 @@
-import { HiOutlineCheckCircle } from "react-icons/hi2";
+import CheckCircle from '../../assets/check-circle.svg?react';
 import { PageSection, SubSection } from '../../components';
 
 
 const CheckItem = ({title, description}: {title: string, description: string}) => {
     return (
         <SubSection horizontal style={{flex: "1 0 346px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", flexWrap: "nowrap", gap: "1rem", alignItems: "start", justifyContent: "left"}}>
-            <HiOutlineCheckCircle color='#ff5454' size={80} style={{marginLeft: "-0.2em", marginTop: "-1.3rem"}}/>
+            <CheckCircle color='#ff5454' fontSize={80} style={{marginLeft: "-0.2em", marginTop: "-1.3rem"}}/>
             <SubSection vertical style={{textAlign: "left", gap: "0.6rem"}}>
                 <h4>{title}</h4>
                 <p>{description}</p>
@@ -20,7 +20,7 @@ const ProductSection = () => {
             <SubSection horizontal style={{width: "100%", padding: "20px 0", flexWrap: "wrap-reverse", gap: "2.6rem"}}>
                 <SubSection vertical style={{flex: "2 0 350px", minWidth: "320px", maxWidth: "calc(670px - 2rem)", textAlign: "left", gap: "0.3rem"}}>
                     <SubSection horizontal style={{gap: "0.6rem", alignItems: "center", marginBottom: "1rem", justifyContent: "left"}}>
-                        <img src="./streamlit-logo.svg" alt="Streamlit" style={{width: "38px", height: "auto"}}/>
+                        <img src="./icons/streamlit-logo.svg" alt="Streamlit" style={{width: "38px", height: "auto"}}/>
                         <h4>Streamlit</h4>
                     </SubSection>
                     <h2>Build powerful apps</h2>
