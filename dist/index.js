@@ -155,7 +155,7 @@ async function main() {
   clack.log.success("\u{1F389} Project created successfully!");
   clack.note(`  Install packages:
 
-    1. cd ${selectProjectType} 
+    1. cd ${projectName} 
     2. npm install 
 
   Preview product landing page:
