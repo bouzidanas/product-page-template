@@ -1,0 +1,25 @@
+.page__section {
+    --max-content-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page__section > .section__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-content-width);
+}
+
+.page__section[data-theme="light"] {
+    color: var(--primary-dark-color);
+}
+
+.page__section[data-theme="dark"] {
+    color: var(--primary-light-color);
+}
+

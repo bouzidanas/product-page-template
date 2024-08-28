@@ -1,0 +1,15 @@
+.content__cont {
+    display: flex;
+    gap: inherit;
+    max-width: inherit;
+}
+
+.content__cont.vert {
+    flex-direction: column;
+}
+
+.content__cont.hor {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

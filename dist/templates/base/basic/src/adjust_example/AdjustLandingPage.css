@@ -1,0 +1,278 @@
+/* This is the CSS file for the AdjustLandingPage component. 
+It should contain CSS rules pertaining only to the Adjust Landing Page stylings. */
+
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#root {
+  --primary-light-color: #ffffff;
+  --primary-dark-color: #04182B;
+
+  --secondary-light-color: #F2FAFF;
+  --secondary-dark-color: #6177a4;
+
+  --highlight-color: #005FF7;
+
+  color: var(--primary-light-color);
+  width: 100%;
+  background: linear-gradient( to bottom, #04182B, #04182B 650px, white 650px, white);
+}
+
+h1 {
+  font-size: 2.9rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+button {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-color);
+}
+
+.btn-primary {
+  border-radius: 1.7em;
+  padding: 0.9em 1.5em;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 0.5em 1em;
+  background: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.App__top.btn-primary, *[data-theme="dark"] .App__top.btn-primary {
+  background-color: var(--highlight-color);
+  color: var(--primary-light-color);
+  border: 2px solid var(--highlight-color);
+}
+
+*[data-theme="light"] .App__top.btn-primary {
+  background-color: transparent;
+  color: var(--primary-dark-color);
+  border: 2px solid var(--primary-dark-color);
+}
+
+.App__top.btn-secondary, *[data-theme="dark"] .App__top.btn-secondary {
+  color: var(--primary-light-color);
+}
+
+*[data-theme="light"] .App__top.btn-secondary {
+  color: var(--primary-dark-color);
+}
+
+
+*[data-theme="light"] {
+  color: var(--primary-dark-color);
+  background-color: var(--primary-light-color);
+}
+
+*[data-theme="dark"] {
+  color: var(--primary-light-color);
+  background-color: var(--primary-dark-color);
+}
+
+.section__footer a {
+  color: var(--primary-light-color);
+  user-select: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0.5;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.footer > span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.footer > a {
+  color: var(--primary-light-color);
+  font-size: 84%;
+  flex-grow: 0;
+  flex-wrap: nowrap;
+  user-select: none;
+}
+
+.page__nav {
+  position: absolute;
+  user-select: none;
+}
+
+.page__nav.latch-top {
+  position: fixed;
+  top: 0;
+  animation: fade-in 0.75s ease-in-out;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  z-index: 1000;
+}
+
+.page__nav.mobile {
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.page__nav.mobile::-webkit-scrollbar {
+  display: none;
+}
+
+/* .page__nav ~ section {
+  scroll-margin-top: 68px;
+} */
+
+.header a {
+  color: inherit;
+  user-select: none;
+  cursor: pointer;
+}
+
+.header  span {
+  font-family: "Tiny5", sans-serif;
+}
+
+.mobile .header > * {
+  height: 100px;
+  width: 100%;
+}
+
+.mobile .header > *:not(:last-child){
+  border-bottom: 1px solid #04182B;
+}
+
+.mobile .header > section:first-child {
+  height: 100px;
+}
+
+.mobile .header > *:not(:first-child) {
+  font-size: 130%;
+  font-weight: 700;
+}
+
+.mobile .header a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+  }
+
+  .App__top.btn-secondary:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+  }
+  
+  .App__top.btn-primary:hover, *[data-theme="dark"] .App__top.btn-primary:hover {
+    background-color: var(--primary-light-color);
+    color: var(--primary-dark-color);
+    border: 2px solid var(--primary-light-color);
+  }
+  
+  *[data-theme="light"] .App__top.btn-primary:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-light-color);
+    border: 2px solid var(--highlight-color);
+  }
+
+  .left a:first-child:hover {
+    text-decoration: none;
+  }
+  .mobile .header a:hover {
+    text-decoration: none;
+  }
+}
+
+a:active {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.App__top.btn-secondary:active {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.App__top.btn-primary:active, *[data-theme="dark"] .App__top.btn-primary:active {
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+  border: 2px solid var(--primary-light-color);
+}
+
+*[data-theme="light"] .App__top.btn-primary:active {
+  background-color: var(--highlight-color);
+  color: var(--primary-light-color);
+  border: 2px solid var(--highlight-color);
+}
+
+.left a:first-child:active {
+  text-decoration: none;
+}
+.mobile .header a:active {
+  text-decoration: none;
+}
+
