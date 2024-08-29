@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ppc": "github:bouzidanas/product-page-components",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
